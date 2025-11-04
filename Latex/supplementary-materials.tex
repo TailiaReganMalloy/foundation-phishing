@@ -1,0 +1,208 @@
+%% 
+%% Copyright 2019-2024 Elsevier Ltd
+%% 
+%% This file is part of the 'CAS Bundle'.
+%% --------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.3c of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'CAS Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Supplementary Materials for cas-sc document
+
+\documentclass[a4paper,fleqn]{cas-sc}
+\usepackage[tracking=true]{microtype}
+\usepackage{hyperref}
+\usepackage{afterpage}
+\usepackage{booktabs,longtable}
+\usepackage{amssymb}
+%\usepackage[numbers]{natbib}
+%\usepackage[authoryear]{natbib}
+\usepackage[authoryear]{natbib}
+\usepackage{csquotes}
+\usepackage{algorithm2e}
+\usepackage{placeins}
+\usepackage{xcolor} 
+
+%%%Author macros
+\def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
+\tsc{WGM}
+\tsc{QE}
+%%%
+
+\shorttitle{Cognitive Large Language Models}    
+% Main title of the paper
+\title [mode=title]{Improving Online Anti-Phishing Training Using Cognitive Large Language Models}
+
+% Short author
+\shortauthors{Malloy, Fang, Gonzalez}  
+
+% Uncomment and use as needed
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}[theorem]{Lemma}
+%\newdefinition{rmk}{Remark}
+%\newproof{pf}{Proof}
+%\newproof{pot}{Proof of Theorem \ref{thm}}
+
+\usepackage{xcolor}   % put this in your preamble
+
+% helper macro
+\newcommand{\red}[1]{\textcolor{black}{#1}}
+
+\usepackage[many]{tcolorbox}
+\usepackage{xcolor}
+\usepackage{varwidth}
+\usepackage{environ}
+\usepackage{xparse}
+\usepackage{makecell}
+\usepackage{tabularx}
+\usepackage[title]{appendix}
+
+\begin{document}
+\let\WriteBookmarks\relax
+\def\floatpagepagefraction{1}
+\def\textpagefraction{.001}
+
+\section{Supplementary Materials}
+\begingroup
+\setlength{\LTleft}{-2cm}   % shift table 10 cm into the left margin
+\setlength{\LTright}{0pt}    % (optional) adjust right side too
+\setlength{\LTcapwidth}{\linewidth} % make caption width match the new line width
+\subsection[\appendixname~\thesubsection]{Pre-Experiment Instructions}
+\vspace{6pt}
+In this experiment you will determine whether example emails are genuine or phishing. When reviewing potential phishing emails, pay attention to the following features. After this screen, there will be a quiz on this information.
+\begin{itemize}
+  \item \textbf{Real sender does not match the claimed sender:} Phishing emails often pretend to be from reputable companies, but you can usually spot a fake by checking the address that sent the message. If the \texttt{From} address is a series of numbers, an odd mix of characters, or not the official domain of the company it claims to be from, it is likely a phishing attempt.
+  \item \textbf{Email requests credentials:} Legitimate companies will \emph{never} ask for sensitive information via email. If the email requests your username, password, credit card information, or other sensitive data, it is a phishing attempt.
+  \item \textbf{Suspicious subject line:} Phishing emails often use alarmist, threatening, or enticing subject lines to grab your attention. If the subject is odd, generic, or does not match the content, it could be a phishing email.
+  \item \textbf{Urgent tone:} Phishing scams create a sense of urgency to panic you into acting without thinking. If an email asks for immediate action (e.g., “Your account will be suspended unless you update your information”), it is likely a scam.
+  \item \textbf{Too-good-to-be-true offers:} Emails that promise rewards, discounts, or prizes in exchange for personal information are likely phishing.
+  \item \textbf{Link does not match the text:} A common tactic is disguising a dangerous link with innocent-looking text. Hover your cursor over links before clicking. If the URL does not match the link text, or looks suspicious in any way, do not click. For instance, if the link text reads “bank.com” but hovering shows “hackingsite.com”, it is a \mbox{phishing attempt.}
+\end{itemize}
+
+\subsection[\appendixname~\thesubsection]{Pre-Experiment Quiz}
+\vspace{6pt}
+\begin{enumerate}
+  \item What type of language do phishing emails often use to create a sense of panic?
+  \begin{itemize}
+    \item Urgent language
+    \item Friendly language
+    \item Rude language
+    \item Mean language
+  \end{itemize}
+
+  \item What might a phishing email request of you that would compromise your identity?
+  \begin{itemize}
+    \item Personal information like your favorite color
+    \item Sensitive information like credit card numbers
+    \item Sensitive information like your celebrity crush
+    \item Irrelevant information like your dog's name
+  \end{itemize}
+
+  \item What types of actions might phishing emails request from you that could lead to malware being installed on your computer?
+  \begin{itemize}
+    \item Clicking links only
+    \item Downloading attachments only
+    \item Replying with your computer's information only
+    \item All of the above
+  \end{itemize}
+
+  \item \textls[-25]{How might a phishing email try to ensure that you are susceptible to a \mbox{phishing attempt?}}
+  \begin{itemize}
+    \item Being overly friendly
+    \item Calling you a generic title
+    \item Using poor grammar
+    \item Saying you won the lottery
+  \end{itemize}
+
+  \item How might a phishing email attempt to convince you that it was sent from a \mbox{legitimate source?}
+  \begin{itemize}
+    \item Using an email from a website that you have never heard of
+    \item Sending the email from a website with a famous company name
+    \item Adding a link to a real website in the text of the email
+    \item Using another website name that is different from the one sending the email
+  \end{itemize}
+
+  \item How might a phishing email convince you to click on a fake link?
+  \begin{itemize}
+    \item Adding a lot of random numbers and letters into the link
+    \item Changing the text of the link (can be checked by hovering over it)
+    \item Changing the color of the link to make it look like you've clicked it before
+    \item Keeping the link short so it looks legitimate
+  \end{itemize}
+\end{enumerate}
+
+\subsection[\appendixname~\thesubsection]{Experiment Questions}
+\vspace{6pt}
+\begin{enumerate}
+  \item Is this a phishing email?
+  \begin{itemize}
+    \item Yes
+    \item No
+  \end{itemize}
+
+  \item On a scale from 1--5, with 5 being totally confident, how confident are you in your answer to Question 1?
+  \begin{itemize}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+    \item 5
+  \end{itemize}
+
+  \item What action would you take after receiving this email?
+  \begin{itemize}
+    \item Respond
+    \item Click link
+    \item Check sender
+    \item Check link
+    \item Delete email
+    \item Report email
+  \end{itemize}
+\end{enumerate}
+
+\subsection[\appendixname~\thesubsection]{Post-Experiment Questionnaire}
+\vspace{6pt}
+\begin{enumerate}
+  \item Of the phishing emails you've encountered, what percentage do you think were generated by artificial intelligence models?
+  \begin{itemize}
+    \item \textls[-25]{100\% of the phishing emails I read were written by an Artificial Intelligence model.}
+    \item 75\% of the phishing emails I read were written by an Artificial Intelligence model.
+    \item 50\% of the phishing emails I read were written by an Artificial Intelligence model.
+    \item 25\% of the phishing emails I read were written by an Artificial Intelligence model.
+  \end{itemize}
+
+  \item Of the ham (i.e., non-phishing) emails you've encountered, what percentage do you think were generated by artificial intelligence models?
+  \begin{itemize}
+    \item 100\% of the ham emails I read were written by an Artificial Intelligence model.
+    \item 75\% of the ham emails I read were written by an Artificial Intelligence model.
+    \item 50\% of the ham emails I read were written by an Artificial Intelligence model.
+    \item 25\% of the ham emails I read were written by an Artificial Intelligence model.
+  \end{itemize}
+
+  \item Of the phishing emails you've encountered, what percentage do you think were \emph{styled} (i.e., appearance and format) by artificial intelligence models?
+  \begin{itemize}
+    \item 100\% of the phishing emails I read were styled by an Artificial Intelligence model.
+    \item 75\% of the phishing emails I read were styled by an Artificial Intelligence model.
+    \item 50\% of the phishing emails I read were styled by an Artificial Intelligence model.
+    \item 25\% of the phishing emails I read were styled by an Artificial Intelligence model.
+  \end{itemize}
+
+  \item Of the ham (i.e., non-phishing) emails you've encountered, what percentage do you think were \emph{styled} (i.e., appearance and format) by artificial intelligence models?
+  \begin{itemize}
+    \item 100\% of the ham emails I read were styled by an Artificial Intelligence model.
+    \item 75\% of the ham emails I read were styled by an Artificial Intelligence model.
+    \item 50\% of the ham emails I read were styled by an Artificial Intelligence model.
+    \item 25\% of the ham emails I read were styled by an Artificial Intelligence model.
+  \end{itemize}
+
+  \item What criteria did you use to identify whether an email was a phishing attempt? \\
+  Open response.
+\end{enumerate}
+\end{document}
